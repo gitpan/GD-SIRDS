@@ -1,0 +1,6 @@
+Revision history for Perl extension GD::SIRDS.
+
+0.01  Fri May 10 23:06:36 2002
+	- original version; created by h2xs 1.21 with options
+		-AX -n GD::SIRDS
+
