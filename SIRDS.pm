@@ -1,26 +1,5 @@
 package GD::SIRDS;
 
-use 5.006;
-use strict;
-use warnings;
-
-our $VERSION = '0.01';
-
-require Exporter;
-our @ISA = qw(Exporter);
-our @EXPORT = qw(
-	gd_sirds
-);
-
-use Carp;
-use POSIX;
-use GD;
-
-use constant DEPTH_OF_FIELD => 1/3;
-use constant EYE_SEPARATION => 200;
-
-=pod
-
 =head1 NAME
 
 GD::SIRDS - Create a GD image of a Single Image Random Dot Stereogram
@@ -49,6 +28,27 @@ GD::SIRDS - Create a GD image of a Single Image Random Dot Stereogram
 
 C<GD::SIRDS> exports a single subroutine, C<gd_sirds>, that produces a
 Single Image Random Dot Stereogram (SIRDS).
+
+=cut
+
+use 5.006;
+use strict;
+use warnings;
+
+our $VERSION = '0.02';
+
+require Exporter;
+our @ISA = qw(Exporter);
+our @EXPORT = qw(
+	gd_sirds
+);
+
+use Carp;
+use POSIX;
+use GD;
+
+use constant DEPTH_OF_FIELD => 1/3;
+use constant EYE_SEPARATION => 200;
 
 =over 4
 
@@ -262,9 +262,7 @@ sub _luminance
 	return $r * 0.3 + $g * 0.59 + $b * 0.11;
 }
 
-1;
-
-=pod
+'Woopa woopa woo chuck chuck!';
 
 =back
 
